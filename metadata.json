@@ -1,0 +1,6 @@
+{
+  "name": "Mrs. Stephens Online Tutoring",
+  "description": "Helping children strengthen Reading and Mathematics skills, build academic confidence, and support families through personalized educational support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
