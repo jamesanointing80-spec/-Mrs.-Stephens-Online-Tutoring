@@ -5,10 +5,16 @@ export const OWNER_PORTRAIT_URL = "https://assets.skool.com/f/81649c31d95049d589
 export const HERO_IMAGE_URL = "/assets/aistudio/Smiling_Educator_with_Books_and_Pencils_971c8c34.png";
 export const HERO_IMAGE_FALLBACK = "https://img.sanishtech.com/u/bff24e50688ab643f347c8ffdc740a73.png";
 
+export const READING_IMAGE_URL = "/assets/aistudio/Smiling_Girl_Reading_in_a_Colorful_Library_44a3f6f6.png";
+export const READING_IMAGE_FALLBACK = "https://img.sanishtech.com/u/d31cf6a777283048802dfecef5e0ee2a.png";
+
+export const MATH_IMAGE_URL = "/assets/aistudio/Smiling_Student_s_Math_Learning_Moment_4be43202.png";
+export const MATH_IMAGE_FALLBACK = "https://img.sanishtech.com/u/b3b04254bc36a17fbf33b205e5987363.png";
+
 export const IMAGES = {
   hero: HERO_IMAGE_URL,
-  readingBooks: "/src/assets/images/reading_session_books_1794332118196.jpg",
-  mathBlocks: "/src/assets/images/math_learning_blocks_1794332118547.jpg",
+  readingBooks: READING_IMAGE_URL,
+  mathBlocks: MATH_IMAGE_URL,
   happyStudent: "/src/assets/images/happy_student_books_1794332119023.jpg",
 };
 
@@ -47,7 +53,8 @@ export const PROGRAMS = [
     description:
       "Help your child build reading skills, gain confidence, and develop a love for learning.",
     schedule: "Every Tuesday • 1 Hour Weekly",
-    image: IMAGES.readingBooks,
+    image: READING_IMAGE_URL,
+    fallbackImage: READING_IMAGE_FALLBACK,
     accentColor: "#168C89",
     tagColor: "bg-[#168C89] text-white",
     btnColor: "bg-[#168C89] hover:bg-[#127471] text-white",
@@ -59,7 +66,8 @@ export const PROGRAMS = [
     description:
       "Give your child helpful guidance in mathematics and build confidence.",
     schedule: "Every Thursday • 1 Hour Weekly",
-    image: IMAGES.mathBlocks,
+    image: MATH_IMAGE_URL,
+    fallbackImage: MATH_IMAGE_FALLBACK,
     accentColor: "#D99A36",
     tagColor: "bg-[#D99A36] text-white",
     btnColor: "bg-[#D99A36] hover:bg-[#c2872a] text-white",

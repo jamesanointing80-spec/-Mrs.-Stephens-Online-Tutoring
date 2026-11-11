@@ -42,6 +42,12 @@ export const TutoringPrograms: React.FC = () => {
                     src={program.image}
                     alt={program.title}
                     className="w-full h-full object-cover rounded-xl shadow-xs"
+                    onError={(e) => {
+                      if (program.fallbackImage) {
+                        e.currentTarget.src = program.fallbackImage;
+                      }
+                    }}
+                    referrerPolicy="no-referrer"
                     loading="lazy"
                   />
                 </div>
