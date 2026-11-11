@@ -1,4 +1,5 @@
 export const SKOOL_COMMUNITY_URL = "https://www.skool.com/the-business-of-audio-2845";
+export const SKOOL_ABOUT_URL = "https://www.skool.com/the-business-of-audio-2845/about";
 
 export const OWNER_PORTRAIT_URL = "https://assets.skool.com/f/81649c31d95049d589c3d6d74ec343bd/0cadf554b8794961b08f02ad50fb4429eff6fa5e2cd845d3b6dda4751d71b1c3.jpg";
 

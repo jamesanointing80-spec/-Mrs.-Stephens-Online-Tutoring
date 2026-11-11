@@ -1,6 +1,6 @@
 import React from "react";
 import { Calendar, ArrowRight, ArrowUpRight } from "lucide-react";
-import { PROGRAMS, SKOOL_COMMUNITY_URL } from "../data/content";
+import { PROGRAMS, SKOOL_COMMUNITY_URL, SKOOL_ABOUT_URL } from "../data/content";
 
 export const TutoringPrograms: React.FC = () => {
   return (
@@ -108,7 +108,7 @@ export const TutoringPrograms: React.FC = () => {
         {/* Centered Explore Learning Community Button */}
         <div className="flex justify-center">
           <a
-            href={SKOOL_COMMUNITY_URL}
+            href={SKOOL_ABOUT_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-3.5 text-sm sm:text-base font-semibold text-white bg-[#14234F] hover:bg-[#24365F] active:scale-98 rounded-full shadow-sm hover:shadow-md transition-all focus:outline-hidden focus-visible:ring-2 focus-visible:ring-[#14234F] whitespace-nowrap"
