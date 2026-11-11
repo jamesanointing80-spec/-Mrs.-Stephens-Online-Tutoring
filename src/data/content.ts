@@ -2,7 +2,11 @@ export const SKOOL_COMMUNITY_URL = "https://www.skool.com/the-business-of-audio-
 
 export const OWNER_PORTRAIT_URL = "https://assets.skool.com/f/81649c31d95049d589c3d6d74ec343bd/0cadf554b8794961b08f02ad50fb4429eff6fa5e2cd845d3b6dda4751d71b1c3.jpg";
 
+export const HERO_IMAGE_URL = "/assets/aistudio/Smiling_Educator_with_Books_and_Pencils_971c8c34.png";
+export const HERO_IMAGE_FALLBACK = "https://img.sanishtech.com/u/bff24e50688ab643f347c8ffdc740a73.png";
+
 export const IMAGES = {
+  hero: HERO_IMAGE_URL,
   readingBooks: "/src/assets/images/reading_session_books_1794332118196.jpg",
   mathBlocks: "/src/assets/images/math_learning_blocks_1794332118547.jpg",
   happyStudent: "/src/assets/images/happy_student_books_1794332119023.jpg",

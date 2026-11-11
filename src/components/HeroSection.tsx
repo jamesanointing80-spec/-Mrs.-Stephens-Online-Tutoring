@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { ArrowUpRight, GraduationCap } from "lucide-react";
-import { OWNER_PORTRAIT_URL, SKOOL_COMMUNITY_URL } from "../data/content";
+import { HERO_IMAGE_URL, HERO_IMAGE_FALLBACK, SKOOL_COMMUNITY_URL } from "../data/content";
 
 export const HeroSection: React.FC = () => {
+  const [imgSrc, setImgSrc] = useState(HERO_IMAGE_URL);
+
   const handleScrollToPrograms = (e: React.MouseEvent) => {
     e.preventDefault();
     const element = document.getElementById("programs");
@@ -22,14 +24,14 @@ export const HeroSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* LEFT: Text & CTAs */}
-          <div className="lg:col-span-7 flex flex-col items-start text-left">
+          <div className="lg:col-span-6 flex flex-col items-start text-left">
             {/* Eyebrow */}
             <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#D4F0EE] text-[#168C89] text-[11px] sm:text-xs font-bold tracking-wider uppercase mb-5">
               <span>PERSONALIZED LEARNING • STRONGER FUTURES</span>
             </div>
 
             {/* Headline */}
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-[3.75rem] font-bold text-[#14234F] leading-[1.12] mb-5 tracking-tight">
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-[#14234F] leading-[1.12] mb-5 tracking-tight">
               Helping Children Grow in{" "}
               <span className="text-[#168C89] italic font-serif">Reading</span>,{" "}
               Math &{" "}
@@ -77,25 +79,23 @@ export const HeroSection: React.FC = () => {
             </div>
           </div>
 
-          {/* RIGHT: Mrs. Stephens Portrait with exact composition */}
-          <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md sm:max-w-lg lg:max-w-none flex items-center justify-center">
-              {/* Circular light teal backdrop */}
-              <div className="absolute w-[320px] sm:w-[380px] lg:w-[420px] aspect-square rounded-full bg-[#D8F0EE] -z-10" />
-
-              {/* Mrs. Stephens Portrait */}
-              <div className="relative w-[300px] sm:w-[350px] lg:w-[390px] aspect-square rounded-full overflow-hidden shadow-xl border-4 border-white bg-white">
+          {/* RIGHT: Mrs. Stephens Portrait with increased size and no circular background */}
+          <div className="lg:col-span-6 relative flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-lg sm:max-w-xl lg:max-w-none">
+              {/* Mrs. Stephens Portrait with books and pencils */}
+              <div className="relative w-full aspect-4/3 sm:aspect-16/11 lg:aspect-4/3 rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-white">
                 <img
-                  src={OWNER_PORTRAIT_URL}
-                  alt="Mrs. Lorene Stephens smiling"
-                  className="w-full h-full object-cover object-top"
+                  src={imgSrc}
+                  alt="Mrs. Lorene Stephens smiling with books and pencils"
+                  className="w-full h-full object-cover object-center"
+                  onError={() => setImgSrc(HERO_IMAGE_FALLBACK)}
                   referrerPolicy="no-referrer"
                   loading="eager"
                 />
               </div>
 
               {/* Laurel Wreath Badge (Top Right) */}
-              <div className="absolute -top-3 right-2 sm:-top-5 sm:right-4 z-20">
+              <div className="absolute -top-4 -right-2 sm:-top-5 sm:-right-4 z-20">
                 <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-white shadow-xl border border-[#D99A36]/40 flex flex-col items-center justify-center p-2 text-center">
                   {/* Circular Laurel wreath SVG */}
                   <svg
@@ -132,30 +132,6 @@ export const HeroSection: React.FC = () => {
                     <br />
                     Students
                   </span>
-                </div>
-              </div>
-
-              {/* Books & Colorful Pencils Cup graphic (Bottom Right) */}
-              <div className="absolute -bottom-4 right-0 sm:right-2 z-20 flex flex-col items-end pointer-events-none">
-                {/* Pencil Pot */}
-                <div className="relative mr-6 mb-[-6px]">
-                  <div className="w-12 h-14 bg-white rounded-t-lg rounded-b-md shadow-md border border-slate-200 flex items-center justify-center relative overflow-hidden">
-                    {/* Colorful pencil tips emerging */}
-                    <div className="absolute -top-4 flex gap-1 items-end">
-                      <div className="w-1.5 h-7 bg-amber-400 rounded-t-xs -rotate-6" />
-                      <div className="w-1.5 h-9 bg-emerald-500 rounded-t-xs -rotate-2" />
-                      <div className="w-1.5 h-8 bg-sky-500 rounded-t-xs rotate-3" />
-                      <div className="w-1.5 h-10 bg-rose-500 rounded-t-xs rotate-6" />
-                      <div className="w-1.5 h-8 bg-purple-500 rounded-t-xs rotate-12" />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Stack of colorful textbooks */}
-                <div className="flex flex-col items-end space-y-[-2px]">
-                  <div className="w-32 sm:w-36 h-3.5 bg-[#168C89] rounded-sm shadow-xs border-r-4 border-teal-800" />
-                  <div className="w-36 sm:w-40 h-4 bg-[#D99A36] rounded-sm shadow-xs border-r-4 border-amber-700" />
-                  <div className="w-40 sm:w-44 h-4.5 bg-[#14234F] rounded-sm shadow-md border-r-4 border-slate-900" />
                 </div>
               </div>
             </div>
